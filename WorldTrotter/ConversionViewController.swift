@@ -1,7 +1,7 @@
 import UIKit
 
 class ConversionViewController: UIViewController {
-    @IBOutlet var  celsiusLabel: UILabel!
+    @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
     var fahrenheitValue: Measurement<UnitTemperature>? {
@@ -18,6 +18,15 @@ class ConversionViewController: UIViewController {
             return nil
         }
     }
+    
+    //number formatter closure
+    let numberFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 1
+        return nf
+    }()
     
     //Set initial value
     override func viewDidLoad() {
@@ -39,7 +48,7 @@ class ConversionViewController: UIViewController {
     
     func updateCelsiusLabel() {
         if let celsuisValue = celsuisValue {
-            celsiusLabel.text = "\(celsuisValue.value)"
+            celsiusLabel.text = numberFormatter.string(from: NSNumber(value: celsuisValue.value))
         } else {
             celsiusLabel.text = "???"
         }
