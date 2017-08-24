@@ -4,7 +4,12 @@ class ConversionViewController: UIViewController {
     @IBOutlet var  celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
-    var fahrenheitValue: Measurement<UnitTemperature>?
+    var fahrenheitValue: Measurement<UnitTemperature>? {
+        //property observer that monitors change in fahrenheit value
+        didSet {
+            updateCelsiusLabel()
+        }
+    }
     
     var celsuisValue: Measurement<UnitTemperature>? {
         if let fahrenheitValue = fahrenheitValue {
