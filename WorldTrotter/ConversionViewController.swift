@@ -19,13 +19,17 @@ class ConversionViewController: UIViewController {
         }
     }
     
+    //Set initial value
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateCelsiusLabel()
+    }
+    
     @IBAction func fahrenheightFieldEditingChanged(_ textField: UITextField) {
-        
-        //text field has text and text is not empty
-        if let text = textField.text, !text.isEmpty {
-            celsiusLabel.text = text
+        if let text = textField.text, let value = Double(text) {
+            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
         } else {
-            celsiusLabel.text = "???"
+            fahrenheitValue = nil
         }
     }
     
