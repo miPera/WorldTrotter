@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Conversion View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,6 +78,7 @@
                             <outletCollection property="gestureRecognizers" destination="84o-v8-c4g" appends="YES" id="Pkj-Dd-9Te"/>
                         </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="XKo-oB-yHM"/>
                     <connections>
                         <outlet property="celsiusLabel" destination="ORf-2e-dCC" id="2ss-1J-WNq"/>
                         <outlet property="textField" destination="9iD-yx-7Uf" id="oYJ-VU-eJu"/>
@@ -117,6 +118,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="kvi-1v-imC" kind="relationship" relationship="viewControllers" id="be9-p6-HDv"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="XxC-au-QKx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJr-N0-ydA" userLabel="First Responder" sceneMemberID="firstResponder"/>
