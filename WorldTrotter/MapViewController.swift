@@ -18,6 +18,14 @@ class MapViewController: UIViewController {
         
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(segmentedControl)
+        
+        let topConstraint = segmentedControl.topAnchor.constraint(equalTo: view.topAnchor)
+        let leadingConstraing = segmentedControl.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        let trailingConstrant = segmentedControl.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        
+        topConstraint.isActive = true
+        leadingConstraing.isActive = true
+        trailingConstrant.isActive = true
     }
     
     override func viewDidLoad() {
