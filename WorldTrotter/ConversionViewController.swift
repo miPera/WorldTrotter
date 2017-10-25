@@ -1,5 +1,6 @@
 import UIKit
 
+//View controller responsible for converting temperature between F and C.
 class ConversionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
