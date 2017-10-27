@@ -2,8 +2,10 @@ import UIKit
 
 //View controller responsible for converting temperature between F and C.
 class ConversionViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet var celsiusLabel: UILabel!
-    @IBOutlet var textField: UITextField!
+    
+    //Interface Builder Outlets
+    @IBOutlet var celsiusLabel: UILabel!    //Outlet to UILabel
+    @IBOutlet var textField: UITextField!   //Outlet to UIText field
     
     var fahrenheitValue: Measurement<UnitTemperature>? {
         //property observer that monitors change in fahrenheit value
