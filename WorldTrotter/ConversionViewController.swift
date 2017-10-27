@@ -40,6 +40,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         updateCelsiusLabel()
     }
     
+    //Interface Builder action function that handles when the textField UITextField contains input
     @IBAction func fahrenheightFieldEditingChanged(_ textField: UITextField) {
         
         if let text = textField.text, let number = numberFormatter.number(from: text) {
