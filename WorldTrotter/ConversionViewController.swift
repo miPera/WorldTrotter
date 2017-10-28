@@ -7,6 +7,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var celsiusLabel: UILabel!    //Outlet to UILabel
     @IBOutlet var textField: UITextField!   //Outlet to UIText field
     
+    //Farenheit value of temperature
     var fahrenheitValue: Measurement<UnitTemperature>? {
         //property observer that monitors change in fahrenheit value
         didSet {
@@ -14,6 +15,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //Celsius value equivalent of farenheit value. Nil is no farenheit value.
     var celsuisValue: Measurement<UnitTemperature>? {
         if let fahrenheitValue = fahrenheitValue {
             return fahrenheitValue.converted(to: .celsius)
