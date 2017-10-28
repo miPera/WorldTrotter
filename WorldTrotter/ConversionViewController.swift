@@ -66,7 +66,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //Delegate function
+    //Delegate function that allows for only one decimal place in the temperature input
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool  {
         
         let currentLocale = Locale.current
