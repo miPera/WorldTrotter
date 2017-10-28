@@ -50,6 +50,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //Interface Builder action function that dismisses the keyboard when the background view is tapped
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         textField.resignFirstResponder();
     }
