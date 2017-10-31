@@ -1,6 +1,7 @@
 import UIKit
 import MapKit
 
+//View controller class to handle map view
 class MapViewController: UIViewController {
     
     var mapView: MKMapView!
