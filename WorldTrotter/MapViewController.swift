@@ -6,6 +6,7 @@ class MapViewController: UIViewController {
     
     var mapView: MKMapView!
     
+    // Programatically create map view and set constraints
     override func loadView() {
         // Create a map view
         mapView = MKMapView()
