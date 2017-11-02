@@ -6,7 +6,7 @@ class MapViewController: UIViewController {
     
     var mapView: MKMapView!
     
-    // Programatically create map view and set constraints
+    // Programatically create map view with a segmented view and set constraints
     override func loadView() {
         // Create a map view
         mapView = MKMapView()
@@ -14,6 +14,7 @@ class MapViewController: UIViewController {
         // Set it as *the* view of this view controller
         view = mapView
         
+        //create segmented view
         let standardString = NSLocalizedString("Standard", comment: "Standard map view")
         let satelliteString = NSLocalizedString("Satellite", comment: "Satellite map view")
         let hybridString = NSLocalizedString("Hybrid", comment: "Hybrid map view")
