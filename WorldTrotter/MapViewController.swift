@@ -53,6 +53,7 @@ class MapViewController: UIViewController {
         }
     }
     
+    //overridden function that's invoked after view loads
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MapViewController loaded its view")
