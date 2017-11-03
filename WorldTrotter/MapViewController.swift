@@ -40,6 +40,7 @@ class MapViewController: UIViewController {
         trailingConstrant.isActive = true
     }
     
+    //function to detect map changes
     func mapTypeChanged(_ segControl: UISegmentedControl) {
         switch segControl.selectedSegmentIndex {
         case 0:
