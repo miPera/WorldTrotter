@@ -69,6 +69,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     //Delegate function that allows for only one decimal place in the temperature input
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool  {
         
+        //Obtain instance of locale that represents user's region settings and use it to determine appropriate decimal separator.
         let currentLocale = Locale.current
         let decimalSeparator = currentLocale.decimalSeparator ?? "."
         
