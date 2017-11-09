@@ -45,6 +45,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     //Interface Builder action function that handles when the textField UITextField contains input
     @IBAction func fahrenheightFieldEditingChanged(_ textField: UITextField) {
         
+        //Convert text field string into locale-independent number.
         if let text = textField.text, let number = numberFormatter.number(from: text) {
             fahrenheitValue = Measurement(value: number.doubleValue, unit: .fahrenheit)
         } else {
