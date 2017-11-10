@@ -14,7 +14,7 @@ class MapViewController: UIViewController {
         // Set it as *the* view of this view controller
         view = mapView
         
-        //create segmented view
+        //create segmented view and use localized strings
         let standardString = NSLocalizedString("Standard", comment: "Standard map view")
         let satelliteString = NSLocalizedString("Satellite", comment: "Satellite map view")
         let hybridString = NSLocalizedString("Hybrid", comment: "Hybrid map view")
